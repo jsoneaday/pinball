@@ -118,7 +118,7 @@ fn left_flipper_movement(
         }
 
         new_angle += change_angle;
-        let new_clamped_angle = new_angle.clamp(-0.03, 0.03);
+        let new_clamped_angle = new_angle.clamp(-0.3, 0.3);
         let pivot_rotation = Quat::from_rotation_z(new_clamped_angle - left_flipper.curr_angle);
         left_flipper_transform.rotate_around(left_flipper.point_of_rotation, pivot_rotation);
         left_flipper.curr_angle = new_clamped_angle;
@@ -132,6 +132,7 @@ fn right_flipper_movement(
     for (mut right_flipper, mut right_flipper_transform) in right_flippers.iter_mut() {
         let mut new_angle = right_flipper.curr_angle;
         let change_angle: f32;
+
         if keyboard_input.pressed(KeyCode::Right) {
             change_angle = -0.09;
         } else {

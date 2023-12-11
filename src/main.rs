@@ -45,7 +45,7 @@ fn main() {
         .add_plugins(BallPlugin)
         .add_plugins(PinsPlugin)
         .add_plugins(ShapePlugin)
-        .add_systems(Startup,setup)
+        .add_systems(Startup, setup)
         .add_plugins(RapierPhysicsPlugin::<NoUserData>::pixels_per_meter(
             PIXELS_PER_METER,
         ))

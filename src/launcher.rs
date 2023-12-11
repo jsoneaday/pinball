@@ -27,7 +27,7 @@ fn spawn_launcher(mut commands: Commands) {
     };
 
     let launcher_pos = Vec2::new(
-        PIXELS_PER_METER * 0.03,
+        PIXELS_PER_METER * 0.3,
         PIXELS_PER_METER * -0.58
     );
 
@@ -61,7 +61,7 @@ fn launcher_movement(
         if keyboard_input.pressed(KeyCode::Space) {
             next_ypos = next_ypos + PIXELS_PER_METER * 0.04;
         } else {
-            next_ypos = next_ypos + PIXELS_PER_METER * 0.04;
+            next_ypos = next_ypos - PIXELS_PER_METER * 0.04;
         }
         
         let clamped_ypos = next_ypos.clamp(
