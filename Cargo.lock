@@ -2953,15 +2953,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8a99fddc9f0ba0a85884b8d14e3592853e787d581ca1816c91349b10e4eeab"
 
 [[package]]
-name = "rapier"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy_prototype_lyon",
- "bevy_rapier2d",
-]
-
-[[package]]
 name = "rapier2d"
 version = "0.17.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3224,6 +3215,15 @@ name = "siphasher"
 version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "38b58827f4464d87d377d175e90bf58eb00fd8716ff0a62f80356b5e61555d0d"
+
+[[package]]
+name = "ski-mania-pro"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy_prototype_lyon",
+ "bevy_rapier2d",
+]
 
 [[package]]
 name = "slab"
